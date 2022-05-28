@@ -1,0 +1,68 @@
+.form-control {
+    border-radius: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.profile-images-gallery,
+.background-images-gallery {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.profile-images-gallery-container,
+.background-images-gallery-container {
+    width: 100%;
+    overflow: auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-image:not(:first-child),
+.background-image:not(:first-child) {
+    margin-left: 1rem;
+}
+
+.profile-image img,
+.background-image img {
+    height: 100px;
+    width: auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #FFF;
+}
+
+.profile-image img:hover,
+.background-image img:hover {
+    opacity: 0.8;
+    border: 2px solid #F00;
+}
+
+.profile-image.selected img,
+.background-image.selected img {
+    opacity: 0.8;
+    border: 2px solid #0F0;
+}
