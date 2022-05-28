@@ -104,6 +104,20 @@ $(document).ready(function () {
         this.download = 'canvas.png'
     })
 
+    // On Design Image Clicked
+    $('.design-image img').click(function (event) {
+        const data = $(event.target).data();
+        $('#frame-width-input').val(data.frameWidth);
+        $('#frame-height-input').val(data.frameHeight);
+        $('#profile-width-input').val(data.profileWidth);
+        $('#profile-height-input').val(data.profileHeight);
+        $('#profile-left-input').val(data.profileLeft);
+        $('#profile-top-input').val(data.profileTop);
+
+        frameGenerator.onBackgroundImageChanged(getBackgroundImage());
+        frameGenerator.onProfileImageChanged(getProfileImage());
+    })
+
     // Add Profile Image Button Clicked
     $('#profile-image-button').click(function () {
         $('#profile-image-input').click();
