@@ -25,12 +25,7 @@
     background: #555;
 }
 
-.profile-images-gallery,
-.background-images-gallery {
-    width: 100%;
-    overflow-x: hidden;
-}
-
+.design-images-gallery-container,
 .profile-images-gallery-container,
 .background-images-gallery-container {
     width: 100%;
@@ -40,11 +35,13 @@
     flex-direction: row;
 }
 
+.design-image:not(:first-child),
 .profile-image:not(:first-child),
 .background-image:not(:first-child) {
     margin-left: 1rem;
 }
 
+.design-image img,
 .profile-image img,
 .background-image img {
     height: 100px;
@@ -55,6 +52,7 @@
     border: 2px solid #FFF;
 }
 
+.design-image img:hover,
 .profile-image img:hover,
 .background-image img:hover {
     opacity: 0.8;
